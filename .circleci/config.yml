@@ -54,6 +54,10 @@ jobs:
       - run:
           name: Test Railway Auth
           command: |
+             echo $RAILWAY_TOKEN | railway login --browserless
+      - run:
+          name: Test Railway Auth
+          command: |
             railway whoami 
       - run:
           name: Deploy to Railway App (You must set RAILWAY_TOKEN env var)
