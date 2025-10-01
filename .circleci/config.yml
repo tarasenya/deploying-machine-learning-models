@@ -52,14 +52,6 @@ jobs:
       - run: node --version
       - run: npm i -g @railway/cli
       - run:
-          name: Test Railway Auth
-          command: |
-             echo $RAILWAY_TOKEN | railway login --browserless
-      - run:
-          name: Test Railway Auth
-          command: |
-            railway whoami 
-      - run:
           name: Deploy to Railway App (You must set RAILWAY_TOKEN env var)
           command: |
             cd section-07-ci-and-publishing/house-prices-api
